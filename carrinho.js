@@ -8,7 +8,7 @@ let products = [];
 let cart = [];
 
 
-iconcart.addEventListener('click', () => {
+iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 })
 closeCart.addEventListener('click', () => {
