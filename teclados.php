@@ -55,7 +55,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/17.png">
                         <div class="card-body text-center">
                             <p class="card-text">Yamaha PSR-SX720</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">320,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -68,7 +68,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/18.png">
                         <div class="card-body text-center">
                             <p class="card-text">Yamaha PSR-EW320</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">540,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -81,7 +81,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/19.png">
                         <div class="card-body text-center">
                             <p class="card-text">Casio CT-S1 Preto</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">430,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -94,7 +94,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/20.png">
                         <div class="card-body text-center">
                             <p class="card-text">Casio CT-S1 Vermelho</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">450,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -107,7 +107,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/21.png">
                         <div class="card-body text-center">
                             <p class="card-text">Casio CT-S200 Vermelho</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">570,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -120,7 +120,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/22.png">
                         <div class="card-body text-center">
                             <p class="card-text">Teclado MIDI 25 teclas</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">150,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -133,7 +133,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/23.png">
                         <div class="card-body text-center">
                             <p class="card-text">Teclado MIDI 49 Teclas</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">190,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -146,7 +146,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/24.png">
                         <div class="card-body text-center">
                             <p class="card-text">Teclado MIDI 88 Teclas</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">270,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>

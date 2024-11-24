@@ -55,7 +55,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/25.png">
                         <div class="card-body text-center">
                             <p class="card-text">Trompete Sib</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">3000,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -68,7 +68,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/26.png">
                         <div class="card-body text-center">
                             <p class="card-text">Trombone Alto</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">2500,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -81,7 +81,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/27.png">
                         <div class="card-body text-center">
                             <p class="card-text">Tuba Sib</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">1400,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -93,8 +93,8 @@
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/28.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Saxofone Barítono</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">Saxofone</p>
+                            <p class="card-text">1200,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -107,7 +107,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/29.png">
                         <div class="card-body text-center">
                             <p class="card-text">Harmónica</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">35,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -133,7 +133,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/31.png">
                         <div class="card-body text-center">
                             <p class="card-text">Tuba Dó</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">3100,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -146,7 +146,7 @@
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/32.png">
                         <div class="card-body text-center">
                             <p class="card-text">Trompa Bb</p>
-                            <p class="card-text">10 €</p>
+                            <p class="card-text">600,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
