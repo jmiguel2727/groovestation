@@ -6,15 +6,38 @@
     <title>Document</title>
 
     <style>      
-    
-    .cartTab .close, .cartTab .checkout-button{
-    text-decoration: none;
+    .cartTab{
+    width: 400px;
+    background-color: #403F5E;
     color: #eee;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .8s;
+    }
+    body.showCart .cartTab{
+    right: 0;
+    }
+    body.showCart .container{
+    transform: translateX(-200px);
+    transition: .8s;
+    }
+    .cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    }
+    .cartTab .btn .close, .cartTab .btn .checkout-button{
+    text-decoration: none;
+    color: #000000;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
     background: #AAAAAA;
-    border-radius: 4px;
-    font-size: 18px;
+    border-radius: 8px;
+    font-size: 10px;
     }
     .cartTab .btn .close, .cartTab .btn .checkout-button:hover{
     background: #BFBFBF;
@@ -27,13 +50,13 @@
 
     <!-- Carrinho -->
     <div class="cartTab">
-        <h1 class="title ms-3 mt-3">Carrinho :</h1>
+        <h1 class="title ms-4 mt-3"  style="font-size: 2rem;">Carrinho :</h1>
         <div class="listCart">
-            
+            <p class="text-white-muted ms-4 mt-3">Ainda não está disponível</p>
         </div>
         <div class="btn ">
-            <a class="close">CLOSE</a>
-            <a href="checkout.php" class="checkout-button ">Finalizar Compra</a>
+            <button class="close">CLOSE</button>
+            <a  class="checkout-button" href="checkout.php">FINALIZAR</a>
         </div>
     </div>
 
