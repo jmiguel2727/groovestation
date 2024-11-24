@@ -35,6 +35,7 @@
     
     <?php include('includes/linkscss.php') ?>
     <?php include('includes/menu.php') ?>
+    <?php include('includes/carrinho.php') ?>
 
     
     <!-- Lista de Guitarras -->
