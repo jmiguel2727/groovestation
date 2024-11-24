@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <style>
+   .search-results {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 70%;
+   }
+   .search-results a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+   }
+   .search-results a:hover {
+    background-color: #f0f0f0;
+   }
+  </style>
+
 </head>
 <body>
     <!-- Menu principal -->
@@ -21,11 +41,18 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="nav-menu">
                 <form class="d-flex" role="search" action="pagina_de_pesquisa.php" method="GET" style="width: 100%;">
-                    <input class="form-control me-2" type="search" name="query" placeholder="Pesquisar" aria-label="Pesquisar" style="flex-grow: 1;">
+                    <input class="form-control me-2" type="search" id="search-input" name="query" placeholder="Pesquisar" aria-label="Pesquisar" style="flex-grow: 1;">
                     <button class="btn" type="submit">
                         <i class="bi bi-search"></i> <!-- Ícone de pesquisa -->
                     </button>
                 </form>
+                <div class="search-results" id="search-results">
+                    <a href="guitarras.php">Guitarras</a>
+                    <a href="baterias.php">Baterias</a>
+                    <a href="teclados.php">Teclados</a>
+                    <a href="sopros.php">Sopros</a>
+                    <a href="tradicionais.php">Tradicionais</a>
+                </div>              
             </div>
 
             <!-- Ícone do carrinho -->
@@ -51,9 +78,46 @@
                     <a href="teclados.php" class="nav-link text-white">Teclados</a>
                     <a href="sopros.php" class="nav-link text-white">Sopros</a>
                     <a href="tradicionais.php" class="nav-link text-white">Tradicionais</a>
+                    <a href="menu_principal.php" class="nav-link text-white">Promoções</a>
                 </div>
             </div>
         </div>
     </nav> 
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+
+        // Mostra resultados com base na pesquisa
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const items = searchResults.getElementsByTagName('a');
+            let hasResults = false;
+
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i];
+                if (item.textContent.toLowerCase().includes(query)) {
+                    item.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+
+            searchResults.style.display = hasResults ? 'block' : 'none';
+        });
+
+        // Esconde resultados ao clicar fora
+        document.addEventListener('click', function(event) {
+            if (!searchResults.contains(event.target) && event.target !== searchInput) {
+                searchResults.style.display = 'none';
+            }
+        });
+
+        // Impede o fechamento ao clicar dentro dos resultados
+        searchResults.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    </script>
 </body>
 </html>
