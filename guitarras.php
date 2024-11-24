@@ -51,10 +51,10 @@
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/1.png    ">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra Tipo ST</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -64,10 +64,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/2.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra Tipo LP</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -77,10 +77,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/3.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra Tipo SG</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -90,10 +90,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/4.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra Hollowbody</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -103,10 +103,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/5.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra Portuguesa</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -116,10 +116,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/6.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra Clássica</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -129,10 +129,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/7.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra Roundback</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -142,10 +142,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/guitarra.jpg">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/8.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guitarra 12 cordas</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>

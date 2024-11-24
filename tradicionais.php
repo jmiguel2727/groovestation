@@ -51,10 +51,10 @@
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/33.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Clavas</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -64,10 +64,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/34.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Castanholas</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -77,10 +77,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/35.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Pandeireta com Pele</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -90,10 +90,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/36.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Reco-reco</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -103,10 +103,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/37.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Maracas</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -116,10 +116,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/38.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Ganzás</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -129,10 +129,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/39.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Guizeira</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
@@ -142,10 +142,10 @@
 
                 <div class="col-md-3 mb-4">
                     <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/tradicional.png">
+                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/40.png">
                         <div class="card-body text-center">
-                            <p class="card-text">XXXXXXXXXXXXX</p>
-                            <p class="card-text">690,00 €</p>
+                            <p class="card-text">Bombo Tradicional</p>
+                            <p class="card-text">10 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                             </button>
