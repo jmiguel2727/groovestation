@@ -21,10 +21,6 @@
     body.showCart .cartTab{
     right: 0;
     }
-    body.showCart .container{
-    transform: translateX(-200px);
-    transition: .8s;
-    }
     .cartTab .btn{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

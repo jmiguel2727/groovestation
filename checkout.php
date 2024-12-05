@@ -30,7 +30,7 @@
 <body>
 
     <?php include('includes/linkscss.php') ?>
-    <?php include('includes/menu.php') ?>
+    <?php include('includes/header.php') ?>
 
     <main class="checkout-container mx-auto mt-5 mb-5">
         <h2 class="font-weight-bold mb-4">DADOS DE FATURAÇÃO</h2>
@@ -75,7 +75,7 @@
         </form>
     </main>
 
-    <?php include('includes/sobre.php') ?>
+    <?php include('includes/footer.php') ?>
 
 </body>
 </html>

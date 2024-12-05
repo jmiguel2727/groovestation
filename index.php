@@ -50,7 +50,7 @@
 <body>
 
     <?php include('includes/linkscss.php') ?>
-    <?php include('includes/menu.php') ?>
+    <?php include('includes/header.php') ?>
     <?php include('includes/carrinho.php') ?>
     
 
@@ -61,8 +61,7 @@
     </div>
 
     <!-- CAROUSEL -->
-    <div class="container-fluid mb-5 carousel-white slide mt-5">
-        <div class="container">
+        <div class="container mt-5">
             <div class="carousel slide" id="galeria-principal" data-bs-ride="carousel">
                 
                 <div class="carousel-indicators">
@@ -101,7 +100,7 @@
                 </button>
             </div>
         </div>
-    </div>
+
 
 
 
@@ -155,7 +154,7 @@
 
 
             
-    <?php include('includes/sobre.php') ?>
+    <?php include('includes/footer.php') ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script> 
 

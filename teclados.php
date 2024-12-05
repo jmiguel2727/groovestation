@@ -34,7 +34,7 @@
 <body>
 
     <?php include('includes/linkscss.php') ?>
-    <?php include('includes/menu.php') ?>
+    <?php include('includes/header.php') ?>
     <?php include('includes/carrinho.php') ?>
 
 
@@ -157,7 +157,7 @@
         </div>
     </main>
     
-    <?php include('includes/sobre.php') ?>
+    <?php include('includes/footer.php') ?>
 
 </body>
 </html>

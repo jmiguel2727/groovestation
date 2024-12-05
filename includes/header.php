@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-   .search-results {
+<style>
+    .search-results {
     display: none;
     position: absolute;
     background-color: white;
@@ -23,15 +16,14 @@
    .search-results a:hover {
     background-color: #f0f0f0;
    }
-  </style>
+</style>
 
-</head>
-<body>
-    <!-- Menu principal -->
+
+<!-- NavBar -->
     <nav class="navbar navbar-expand-md" style="background-color: #6699cc;">
         <div class="container-fluid" >
             
-            <a class="navbar-brand" href="menu_principal.php">
+            <a class="navbar-brand" href="index.php">
                 <img src="imagens/logo.png" alt="Logo" style="height: 120px;">
             </a>
 
@@ -40,7 +32,7 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="nav-menu">
-                <form class="d-flex" role="search" action="pagina_de_pesquisa.php" method="GET" style="width: 100%;">
+                <form class="d-flex" role="search" action="pagina_de_pesquisa.php" method="GET" style="width: 55%;">
                     <input class="form-control me-2" type="search" id="search-input" name="query" placeholder="Pesquisar" aria-label="Pesquisar" style="flex-grow: 1;">
                     <button class="btn" type="submit">
                         <i class="bi bi-search"></i> <!-- Ícone de pesquisa -->
@@ -56,33 +48,29 @@
             </div>
 
             <!-- Ícone do carrinho -->
-            <div class="row ms-5 d-flex align-items-center">
-                <div class="col-md-8">
-                    <span class="language">PT - EUR</span>
-                </div>
-                <button type="button" class="btn col-md-4">
-                    <i class="icon-cart bi-cart2" style="font-size: 1.9rem;"></i>
-                </button>
-            </div>    
+            
+            <div style="font-size: 0.9rem;">
+                <span class="language">PT - EUR</span>
+            </div>
+            <button type="button" class="btn">
+                <i class="icon-cart bi-cart2" style="font-size: 1.9rem;"></i>
+            </button>
+                
         </div>
     </nav>
 
-    <!-- Menu Instrumentos --> 
-    <nav class="navbar navbar-expand-md " style="background-color: #b3cce6;" >
-        <div class="container-fluid" >
-            
-            <div class="collapse navbar-collapse" id="nav-menu">
-                <div class="d-flex justify-content-around w-100" style="font-size: 1.6rem;"> 
-                    <a href="guitarras.php" class="nav-link text-white">Guitarras</a>
-                    <a href="baterias.php" class="nav-link text-white">Baterias</a>
-                    <a href="teclados.php" class="nav-link text-white">Teclados</a>
-                    <a href="sopros.php" class="nav-link text-white">Sopros</a>
-                    <a href="tradicionais.php" class="nav-link text-white">Tradicionais</a>
-                    <a href="menu_principal.php" class="nav-link text-white">Promoções</a>
-                </div>
-            </div>
+    <!-- Barra Instrumentos --> 
+    
+    <div class="container-fluid" style="background-color: #b3cce6; padding: 10px;">
+        <div class="d-flex justify-content-around w-100" style="font-size: 1.6rem;"> 
+            <a href="guitarras.php" style="color: white; text-decoration: none;">Guitarras</a>
+            <a href="baterias.php" style="color: white; text-decoration: none;">Baterias</a>
+            <a href="teclados.php" style="color: white; text-decoration: none;">Teclados</a>
+            <a href="sopros.php" style="color: white; text-decoration: none;">Sopros</a>
+            <a href="tradicionais.php" style="color: white; text-decoration: none;">Tradicionais</a>
         </div>
-    </nav> 
+    </div>
+    
 
     <script>
         const searchInput = document.getElementById('search-input');
@@ -119,5 +107,4 @@
             event.stopPropagation();
         });
     </script>
-</body>
-</html>
+
