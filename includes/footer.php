@@ -17,11 +17,11 @@
         <!-- Coluna de Informações -->
         <div class="col-md-4 text-center mt-3">                                              
             <h5 class="text-custom-blue font-weight-bold mb-3">Informações</h5>
-                <ul class="list-unstyled text-white">
-                    <li>Termos e Condições</li>
-                    <li>Política de Privacidade</li>
-                    <li>Política de Cookies</li>
-                </ul>
+            <ul class="list-unstyled text-white">
+                <li><a href="info_geral.php#termos" class="text-white text-decoration-none" >Termos e Condições</a></li>
+                <li><a href="info_geral.php#privacidade" class="text-white text-decoration-none" >Política de Privacidade</a></li>
+                <li><a href="info_geral.php#cookies" class="text-white text-decoration-none" >Política de Cookies</a></li>
+            </ul>
         </div>
 
         <!-- Coluna de Contactos -->
@@ -40,7 +40,7 @@
                     
                 
         <div class="text-center text-white mt-5">
-            <p>© 2024 José Menezes | João Luís  </p>
+            <p>© 2024 João Luís | José Menezes  </p>
             <p>Groove Station you, because you rock!</p>
         </div>
     </div>        
