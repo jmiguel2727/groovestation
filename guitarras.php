@@ -5,42 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitarras</title>
 
-    <style>
-    .carrinho {
-        cursor: pointer;
-        width: 100%;
-        padding: 3px;
-        background: #6699cc;
-        border-radius: 8px;
-    }
-    
-    .carrinho:hover {
-        background: #2a2f43f1;
-        transition: .3s;        
-    }
-    .card img {
-    width: 100%; /* Garante que a imagem se ajuste à largura do container */
-    max-width: 180px; /* Define o tamanho máximo da largura da imagem */
-    height: auto; /* Mantém a proporção original da imagem */
-    margin: auto; /* Centraliza a imagem, se necessário */
-    }
-    .card-body p {
-    margin: 4px; /* espaçamento vertical entre as frases */
-    line-height: 1.7; /* altura da linha para aproximar o texto */
-    }
-    </style>
-
 </head>
 <body>
     
     <?php include('includes/linkscss.php') ?>
     <?php include('includes/header.php') ?>
-    <?php include('includes/carrinho.php') ?>
 
-    
     <!-- Lista de Guitarras -->
     <div class="container text-center mt-5">
-        <h1>Guitarras</h1>
+        <h1 style="font-size: 2.2rem;">Guitarras</h1>
     </div>
 
     <main class="container mt-4">

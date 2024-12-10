@@ -1,110 +1,70 @@
-<style>
-    .search-results {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    z-index: 1000;
-    width: 70%;
-   }
-   .search-results a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-   }
-   .search-results a:hover {
-    background-color: #f0f0f0;
-   }
-</style>
-
-
-<!-- NavBar -->
-    <nav class="navbar navbar-expand-md" style="background-color: #6699cc;">
-        <div class="container-fluid" >
-            
-            <a class="navbar-brand" href="index.php">
-                <img src="imagens/logo.png" alt="Logo" style="height: 120px;">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="nav-menu">
-                <form class="d-flex" role="search" action="pagina_de_pesquisa.php" method="GET" style="width: 55%;">
-                    <input class="form-control me-2" type="search" id="search-input" name="query" placeholder="Pesquisar" aria-label="Pesquisar" style="flex-grow: 1;">
-                    <button class="btn" type="submit">
-                        <i class="bi bi-search"></i> <!-- Ícone de pesquisa -->
-                    </button>
-                </form>
-                <div class="search-results" id="search-results">
-                    <a href="guitarras.php">Guitarras</a>
-                    <a href="baterias.php">Baterias</a>
-                    <a href="teclados.php">Teclados</a>
-                    <a href="sopros.php">Sopros</a>
-                    <a href="tradicionais.php">Tradicionais</a>
-                </div>              
-            </div>
-
-            <!-- Ícone do carrinho -->
-            
-            <div style="font-size: 0.9rem;">
-                <span class="language">PT - EUR</span>
-            </div>
-            <button type="button" class="btn">
+<header style="background-color: #6699cc;">
+    <div class="container d-flex justify-content-between align-items-center">
+        
+        <!-- Logo -->
+        <a href="index.php">
+            <img src="imagens/logo.png" alt="Logo" class="img-fluid my-2" style="height: 80px;">
+        </a>
+        
+        <!-- Menu de navegação -->
+        <nav>
+            <ul class="nav" style="font-size: 1.3rem;">
+                <li class="nav-item">
+                    <a class="nav-link text-white text-decoration-none" href="Guitarras.php">Guitarras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-decoration-none" href="Baterias.php">Baterias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-decoration-none" href="Teclados.php">Teclados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-decoration-none" href="Sopros.php">Sopros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-decoration-none" href="Tradicionais.php">Tradicionais</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Idioma e Carrinho -->
+        <div class="d-flex align-items-center">
+            <span style="font-size: 1rem;">PT-EUR</span>
+            <!-- Ícone de Carrinho -->
+            <button class="btn" onclick="openSideBar()">
                 <i class="icon-cart bi-cart2" style="font-size: 1.9rem;"></i>
             </button>
-                
-        </div>
-    </nav>
-
-    <!-- Barra Instrumentos --> 
-    
-    <div class="container-fluid" style="background-color: #b3cce6; padding: 10px;">
-        <div class="d-flex justify-content-around w-100" style="font-size: 1.6rem;"> 
-            <a href="guitarras.php" style="color: white; text-decoration: none;">Guitarras</a>
-            <a href="baterias.php" style="color: white; text-decoration: none;">Baterias</a>
-            <a href="teclados.php" style="color: white; text-decoration: none;">Teclados</a>
-            <a href="sopros.php" style="color: white; text-decoration: none;">Sopros</a>
-            <a href="tradicionais.php" style="color: white; text-decoration: none;">Tradicionais</a>
         </div>
     </div>
-    
+</header>
 
-    <script>
-        const searchInput = document.getElementById('search-input');
-        const searchResults = document.getElementById('search-results');
+<!-- Sidebar (Carrinho) -->
+ 
+<div class="sidebar bar-block collapse" style="width: 300px; right: 0; display: none; position: fixed; height: 100%; top: 0; z-index: 999; background-color: #c1cbd4;" id="mySidebar">
 
-        // Mostra resultados com base na pesquisa
-        searchInput.addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const items = searchResults.getElementsByTagName('a');
-            let hasResults = false;
+    <!-- Div contendo o título "Carrinho" e o botão de fechar -->
+    <div class="bar-item d-flex justify-content-between align-items-center" style="position: relative; padding: 20px;">
+        <h2>Carrinho</h2>
+        <div class="button hide-large" onclick="closeSidebar()" style="font-size: 30px; cursor: pointer;">&times;</div>
+    </div>
+  
+    <!-- Adicione os itens do carrinho aqui -->
 
-            for (let i = 0; i < items.length; i++) {
-                const item = items[i];
-                if (item.textContent.toLowerCase().includes(query)) {
-                    item.style.display = 'block';
-                    hasResults = true;
-                } else {
-                    item.style.display = 'none';
-                }
-            }
+    <!-- Botão Finalizar Compra -->
+     
+    <a href="checkout.php" class="btn btn-lg text-white" style="position: absolute; background-color: #2b5d8e; bottom: 10px; left: 10px; right: 10px;">Finalizar Compra</a>
 
-            searchResults.style.display = hasResults ? 'block' : 'none';
-        });
+</div>
 
-        // Esconde resultados ao clicar fora
-        document.addEventListener('click', function(event) {
-            if (!searchResults.contains(event.target) && event.target !== searchInput) {
-                searchResults.style.display = 'none';
-            }
-        });
 
-        // Impede o fechamento ao clicar dentro dos resultados
-        searchResults.addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-    </script>
+<script>
+// Função para abrir a sidebar
+function openSideBar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
 
+// Função para fechar a sidebar
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
