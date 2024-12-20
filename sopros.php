@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sopros</title>
-
+    <?php include('includes/linkscss.php') ?>
 </head>
 <body>
     
-    <?php include('includes/linkscss.php') ?>
     <?php include('includes/header.php') ?>
 
     <!-- Lista de Sopros -->

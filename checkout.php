@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <?php include('includes/linkscss.php')?>
 </head>
 <body>
-
-    <?php include('includes/linkscss.php') ?>
-    <?php include('includes/header.php') ?>
+ 
+    <?php include('includes/header.php')?>
 
     <main class="checkout-container mx-auto mt-5 mb-5">
         <h2 class="font-weight-bold mb-4">DADOS DE FATURAÇÃO</h2>
@@ -24,7 +23,7 @@
                     <input type="text" class="form-control" id="last-name" required>
                 </div>
             </div>
-            <div class="form-group mb-3">
+            <div class="form-group col-md-6">
                 <label for="phone">Contacto *</label>
                 <input type="text" class="form-control" id="phone" required>
             </div>

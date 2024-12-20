@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Baterias</title>
+    <?php include('includes/linkscss.php') ?>
 </head>
 <body>
-
-    <?php include('includes/linkscss.php') ?>
+       
     <?php include('includes/header.php') ?>
 
     
@@ -80,7 +79,7 @@
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/13.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Timbalão de Chão</p>
+                            <p class="card-text">Timbalão</p>
                             <p class="card-text">300,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
@@ -93,7 +92,7 @@
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/14.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Tarola de Madeira</p>
+                            <p class="card-text">Tarola</p>
                             <p class="card-text">400,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
@@ -138,4 +137,3 @@
 
 
     
-

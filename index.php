@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Groove Station</title>
+    <?php include('includes/linkscss.php') ?>
     
 </head>
 <body>
-
-    <?php include('includes/linkscss.php') ?>
+    
     <?php include('includes/header.php') ?>
     
    <!-- Frase de boas-vindas -->
@@ -49,52 +49,53 @@
     </div>
 
     <!-- Informações -->
-    <div class="container py-5">
-        <div class="features-container mb-5">
+    <div class="container py-5 mb-5">
+        <div class="features-container">
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fas fa-shipping-fast fs-4"></i>
                 </div>
-                <h3 style="font-weight: bold; font-size: 1rem;">Entregas Rápidas</h3>
-                <p style="font-size: 0.85rem; color: #6c757d;">Até as 14h do dia seguinte</p>
+                <h3 class="title-feature">Entregas Rápidas</h3>
+                <p class="text-feature">Até as 14h do dia seguinte</p>
             </div>
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fas fa-shield-alt fs-4"></i>
                 </div>
-                <h3 style="font-weight: bold; font-size: 1rem;">5 Anos de Garantia</h3>
-                <p style="font-size: 0.85rem; color: #6c757d;">Grátis</p>
+                <h3 class="title-feature">5 Anos de Garantia</h3>
+                <p class="text-feature">Grátis</p>
             </div>
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fas fa-undo fs-4"></i>
                 </div>
-                <h3 style="font-weight: bold; font-size: 1rem;">30 dias</h3>
-                <p style="font-size: 0.85rem; color: #6c757d;">Para devolução</p>
+                <h3 class="title-feature">30 dias</h3>
+                <p class="text-feature">Para devolução</p>
             </div>
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fas fa-headset fs-4"></i>
                 </div>
-                <h3 style="font-weight: bold; font-size: 1rem;">Suporte Dedicado</h3>
-                <p style="font-size: 0.85rem; color: #6c757d;">Pré e Pós Venda</p>
+                <h3 class="title-feature">Suporte Dedicado</h3>
+                <p class="text-feature">Pré e Pós Venda</p>
             </div>
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fas fa-credit-card fs-4"></i>
                 </div>
-                <h3 style="font-weight: bold; font-size: 1rem;">Pagamento 12x</h3>
-                <p style="font-size: 0.85rem; color: #6c757d;">Sem juros</p>
+                <h3 class="title-feature">Pagamento 12x</h3>
+                <p class="text-feature">Sem juros</p>
             </div>
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fas fa-award fs-4"></i>
                 </div>
-                <h3 style="font-weight: bold; font-size: 1rem;">Melhor Serviço</h3>
-                <p style="font-size: 0.85rem; color: #6c757d;">De Portugal</p>
+                <h3 class="title-feature">Melhor Serviço</h3>
+                <p class="text-feature">De Portugal</p>
             </div>
         </div>
     </div>
+
         
     <?php include('includes/footer.php') ?>
 

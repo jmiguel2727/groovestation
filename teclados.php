@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teclados</title>
-
+    <?php include('includes/linkscss.php') ?>
 </head>
 <body>
 
-    <?php include('includes/linkscss.php') ?>
     <?php include('includes/header.php') ?>
-
 
     <!-- Lista de Teclados -->
     <div class="container text-center mt-5">
@@ -80,7 +78,7 @@
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/21.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Casio CT-S200 Vermelho</p>
+                            <p class="card-text">Casio CT-S200</p>
                             <p class="card-text">570,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>

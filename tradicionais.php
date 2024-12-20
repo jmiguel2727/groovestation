@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tradicionais</title>
-
+    <?php include('includes/linkscss.php') ?>
 </head>
 <body>
     
-    <?php include('includes/linkscss.php') ?>
     <?php include('includes/header.php') ?>
   
     <!-- Lista de Tradicionais -->
@@ -53,7 +52,7 @@
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/35.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Pandeireta com Pele</p>
+                            <p class="card-text">Pandeireta</p>
                             <p class="card-text">40,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
@@ -118,7 +117,7 @@
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/40.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Bombo Tradicional</p>
+                            <p class="card-text">Bombo</p>
                             <p class="card-text">210,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
