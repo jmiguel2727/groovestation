@@ -13,11 +13,22 @@
 /* caixas de informações index.php */
 .feature-box .title-feature {
     font-weight: bold;
-    font-size: 0.3rem;
+    font-size: 1rem;
 }
 .feature-box .text-feature {
     font-size: 0.85rem;
     color: #6c757d;
+}
+.feature-box .feature-icon {
+    color: #323C90;
+}
+.feature-box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd; /* Adiciona uma borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 20px; /* Espaço entre as caixas */
+    background-color: #f8f9fa; /* Cor de fundo das caixas */
 }
 /* caixa de checkout.php */
 .finalizar {
