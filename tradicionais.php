@@ -22,7 +22,7 @@
             <p class="text-muted mb-4">Explore ritmos envolventes com as nossos produtos de altíssima qualidade.</p>
 
             <div class="row">
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/33.png">
                         <div class="card-body text-center">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/34.png">
                         <div class="card-body text-center">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/35.png">
                         <div class="card-body text-center">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/36.png">
                         <div class="card-body text-center">
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/37.png">
                         <div class="card-body text-center">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/38.png">
                         <div class="card-body text-center">
@@ -100,7 +100,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/39.png">
                         <div class="card-body text-center">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/40.png">
                         <div class="card-body text-center">

@@ -12,18 +12,18 @@
 
     <main class="checkout-container mx-auto mt-5 mb-5">
         <h2 class="font-weight-bold mb-4">DADOS DE FATURAÇÃO</h2>
-        <form class="formulario">
+        <form class="formulario " >
             <div class="form-row mb-3">
-                <div class="form-group col-md-6">
+                <div class="form-group col-6">
                     <label for="first-name">Nome *</label>
                     <input type="text" class="form-control" id="first-name" required>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-6">
                     <label for="last-name">Apelido *</label>
                     <input type="text" class="form-control" id="last-name" required>
                 </div>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-6">
                 <label for="phone">Contacto *</label>
                 <input type="text" class="form-control" id="phone" required>
             </div>
@@ -36,11 +36,11 @@
                 <input type="text" class="form-control" id="address" placeholder="Nome da rua e número da porta" required>
             </div>
             <div class="form-row mb-3">
-                <div class="form-group col-md-6">
+                <div class="form-group col-6">
                     <label for="postal-code">Código postal *</label>
                     <input type="text" class="form-control" id="postal-code" required>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-6">
                     <label for="postal-location">Localidade do código postal *</label>
                     <input type="text" class="form-control" id="postal-location" required>
                 </div>

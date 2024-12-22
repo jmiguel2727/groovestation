@@ -23,7 +23,7 @@
             <p class="text-muted mb-4">Explore ritmos envolventes com as nossos produtos de altíssima qualidade.</p>
 
             <div class="row">
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/9.png">
                         <div class="card-body text-center">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/10.png">
                         <div class="card-body text-center">
@@ -49,11 +49,11 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/11.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Acessório para Bateria</p>
+                            <p class="card-text">Acessório</p>
                             <p class="card-text">100,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
@@ -62,11 +62,11 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/12.png">
                         <div class="card-body text-center">
-                            <p class="card-text">Bateria com Ferragens</p>
+                            <p class="card-text">Bateria Clássica</p>
                             <p class="card-text">1000,00 €</p>
                             <button class="carrinho text-white">
                                 <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/13.png">
                         <div class="card-body text-center">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/14.png">
                         <div class="card-body text-center">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/15.png">
                         <div class="card-body text-center">
@@ -114,7 +114,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card ">
                         <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/16.png">
                         <div class="card-body text-center">

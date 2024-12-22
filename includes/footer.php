@@ -21,11 +21,11 @@
         <div class="col-md-4 text-center mt-5">
             <ul class="list-unstyled text-white">
                 <li class="align-items-center">
-                    <i class="fas fa-envelope" style="color: #6699cc;"></i>
+                    <i class="bi bi-envelope" style="color: #6699cc;"></i>
                     <span>geral@groove_station.pt</span>
                 </li>
                 <li class="align-items-center mt-2">
-                    <i class="fas fa-phone mr-2" style="color: #6699cc;"></i>
+                    <i class="bi bi-phone mr-2" style="color: #6699cc;"></i>
                     <span>(+351) 999 999 999</span>
                 </li>
             </ul>
