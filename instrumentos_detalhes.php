@@ -1,7 +1,6 @@
 <?php 
 if(empty($_GET['Id'])){
     header('Location:guitarras.php');
-    header('Location:instrumentos.php');
     header('Location:teclados.php');
     header('Location:baterias.php');
     header('Location:sopros.php');

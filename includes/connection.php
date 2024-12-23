@@ -1,6 +1,6 @@
 <?php
-$user = 'groove';
-$pass = 'groove';
+$user = 'root';
+$pass = '';
 $database = 'GrooveStationBD';
 
 try{

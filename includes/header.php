@@ -9,7 +9,6 @@
         <nav>
             <!-- Menu instrumentos visível só em ecrãs grandes-->
             <ul class="nav d-none d-md-flex" style="font-size: 1.3rem;">
-                <li class="nav-item"><a class="nav-link text-white text-decoration-none" href="Instrumentos.php">Instrumentos</a></li>
                 <li class="nav-item"><a class="nav-link text-white text-decoration-none" href="Guitarras.php">Guitarras</a></li>
                 <li class="nav-item"><a class="nav-link text-white text-decoration-none" href="Baterias.php">Baterias</a></li>
                 <li class="nav-item"><a class="nav-link text-white text-decoration-none" href="Teclados.php">Teclados</a></li>
