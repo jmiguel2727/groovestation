@@ -1,6 +1,5 @@
 /* botão carrinho dos instrumentos */
 .carrinho {
-    cursor: pointer;
     width: 100%;
     padding: 3px;
     background: #6699cc;
@@ -9,6 +8,15 @@
 .carrinho:hover {
     background: #2a2f43f1;
     transition: .3s;        
+}
+.margin-top-5{
+    margin-top: 5px;
+}
+.detalhes {
+    width: 100%;
+    padding: 3px;
+    background: #b6babe;
+    border-radius: 8px;
 }
 /* caixas de informações index.php */
 .feature-box .title-feature {
@@ -47,4 +55,9 @@
     padding: 2rem;
     border-radius: 1.7rem;            
     width: 40rem;
+}
+
+.detalhes-preco{
+    font-size: xxx-large;
+    text-align: left;
 }

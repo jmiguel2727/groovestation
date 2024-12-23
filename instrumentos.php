@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teclados</title>
+    <title>Instrumentos</title>
+
     <?php include('includes/linkscss.php') ?>
 </head>
-<body>
-
+<body>   
+    
     <?php include('includes/header.php') ?>
     <?php include('includes/connection.php') ?>
-    
-    <!-- Lista de Teclados -->
+
+    <!-- Lista de Guitarras -->
     <div class="container text-center mt-5">
-        <h1 style="font-size: 2.2rem;">Teclados</h1>
+        <h1 style="font-size: 2.2rem;">Instrumentos</h1>
     </div>
 
     <main class="container mt-4">
         <div class="p-5 rounded">
                 
-            <h1 class="h4 font-weight-bold mb-2">Teclados: Descubra os melhores preços</h1>
+            <h1 class="h4 font-weight-bold mb-2">Instrumentos: Descubra os melhores preços</h1>
             <p class="text-muted mb-4">Explore ritmos envolventes com as nossos produtos de altíssima qualidade.</p>
-
 
             <div class="row">
                 <?php 
-                    $sql = 'SELECT * FROM produtos WHERE tipo = 3';
+                    $sql = 'SELECT * FROM produtos';
                     $stmt = $dbh->prepare($sql);
                     $stmt->execute();
 
@@ -55,7 +55,7 @@
             </div>
         </div>
     </main>
-    
+
     <?php include('includes/footer.php') ?>
 
 </body>

@@ -9,7 +9,7 @@
 <body>
        
     <?php include('includes/header.php') ?>
-
+    <?php include('includes/connection.php') ?>
     
     <!-- Lista de Baterias -->
     <div class="container text-center mt-5">
@@ -23,109 +23,34 @@
             <p class="text-muted mb-4">Explore ritmos envolventes com as nossos produtos de altíssima qualidade.</p>
 
             <div class="row">
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/9.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Bateria Acústica</p>
-                            <p class="card-text">700,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <?php 
+                    $sql = 'SELECT * FROM produtos WHERE tipo = 2';
+                    $stmt = $dbh->prepare($sql);
+                    $stmt->execute();
 
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/10.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Bateria Digital</p>
-                            <p class="card-text">600,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/11.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Acessório</p>
-                            <p class="card-text">100,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/12.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Bateria Clássica</p>
-                            <p class="card-text">1000,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/13.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Timbalão</p>
-                            <p class="card-text">300,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/14.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Tarola</p>
-                            <p class="card-text">400,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/15.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Bombo</p>
-                            <p class="card-text">550,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card ">
-                        <img alt="Bateria Acústica Completa" class="card-img-top" src="imagens/16.png">
-                        <div class="card-body text-center">
-                            <p class="card-text">Timbalão</p>
-                            <p class="card-text">200,00 €</p>
-                            <button class="carrinho text-white">
-                                <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                    if($stmt && $stmt->rowCount() > 0){
+                        while($produtos = $stmt->fetchObject()) {
+                            $imagem = filter_var($produtos->Imagem, FILTER_VALIDATE_URL) !== false ? $produtos->Imagem : 'imagens/instrumentos/'.$produtos->Imagem;
+                            ?>
+                            <div class="col-md-4 col-lg-3 mb-4">
+                                <div class="card ">
+                                    <img alt="<?= $produtos->Nome ?>" class="card-img-top" src="<?= $imagem ?>">
+                                    <div class="card-body text-center">
+                                        <p class="card-text"><?= $produtos->Nome ?></p>
+                                        <p class="card-text"><?= $produtos->Preco ?> € </p>
+                                        <button class="carrinho text-white">
+                                            <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
+                                        </button>
+                                        <button class="detalhes margin-top-5">
+                                            <a href="instrumentos_detalhes.php?Id=<?= $produtos->Id ?>" style="font-size: 1.2rem;">Detalhes</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php
+                        }    
+                    }
+                ?>
             </div>
         </div>
     </main>    
