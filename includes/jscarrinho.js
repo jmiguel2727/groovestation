@@ -78,6 +78,3 @@ function removeFromCart(index) {
 
 // Chama a função para atualizar o carrinho ao carregar a página
 document.addEventListener('DOMContentLoaded', updateCart);
-
-// Remover a barra de rolagem visível usando um script inline
-document.getElementById('cart-items').style.webkitOverflowScrolling = 'touch';

@@ -66,7 +66,7 @@
     <div id="cart-items" class="overflow-y-auto" style="height: 70vh; padding: 10px;"></div>
     <div id="cart-total" style="font-weight: bold; padding:10px;">Total: 0 €</div>
     <!-- Botão Finalizar Compra --> 
-    <a href="checkout.php" class="btn btn-lg text-white" style="position: absolute; background-color: #2b5d8e; bottom: 10px; left: 10px; right: 10px;">Finalizar Compra</a>
+    <a href="checkout.php" class="btn btn-lg text-white" style="position: absolute; background-color: #2b5d8e; bottom: 10px; left: 10px; right: 10px;">Comprar</a>
 </div>
 
 <script src="includes/jscarrinho.js">// script jscarrinho.js</script>

@@ -37,7 +37,7 @@
 .finalizar {
     cursor: pointer;
     width: 100%;
-    padding: 8px;
+    padding: 8px !important;
     background: #35BF3E;
     border-radius: 8px;
     }
