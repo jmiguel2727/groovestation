@@ -56,7 +56,7 @@ if(empty($_GET['Id'])){
                     <div class="card ">
                         <div class="card-body text-center">
                             <p class="card-text"><?= $produto->Descricao ?></p>
-                            <p class="card-text detalhes-preco"><?= $produto->Preco ?> € </p>
+                            <p class="card-text detalhes-preco text-center"><?= $produto->Preco ?> € </p>
                             <form action="includes/updateproduto.inc.php" method="post">
                                 <button class="carrinho text-white" type="submit">
                                     <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
@@ -66,12 +66,11 @@ if(empty($_GET['Id'])){
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </main>
 
-    <?php include('includes/footer.php') ?>
+    <?php include('includes/footer.php') ?>     
 
 </body>
 </html>

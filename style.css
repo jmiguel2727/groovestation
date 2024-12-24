@@ -12,12 +12,7 @@
 .margin-top-5{
     margin-top: 5px;
 }
-.detalhes {
-    width: 100%;
-    padding: 3px;
-    background: #b6babe;
-    border-radius: 8px;
-}
+
 /* caixas de informações index.php */
 .feature-box .title-feature {
     font-weight: bold;
@@ -56,8 +51,24 @@
     border-radius: 1.7rem;            
     width: 40rem;
 }
-
+/* página detalhes */
 .detalhes-preco{
     font-size: xxx-large;
     text-align: left;
+}
+.detalhes:hover{
+    background: #2a2f43f1;
+    transition: .3s;
+}
+.detalhes {
+    width: 100%;
+    padding: 3px;
+    background: #b6babe;
+    border-radius: 8px;
+}
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 40% !important; /* Largura de 45% em telas menores */
+    }
 }

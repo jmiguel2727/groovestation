@@ -12,11 +12,11 @@
     <?php include('includes/connection.php') ?>
     
     <!-- Lista de Baterias -->
-    <div class="container text-center mt-5">
+    <div class="container text-center mt-4">
         <h1 style="font-size: 2.2rem;">Baterias e Percussão</h1>
     </div>
 
-    <main class="container mt-4">
+    <main class="container">
         <div class="p-5 rounded">
                 
             <h1 class="h4 font-weight-bold mb-2">Baterias e Percussão: Descubra os melhores preços</h1>
@@ -38,11 +38,11 @@
                                     <div class="card-body text-center">
                                         <p class="card-text"><?= $produtos->Nome ?></p>
                                         <p class="card-text"><?= $produtos->Preco ?> € </p>
-                                        <button class="carrinho text-white">
+                                        <button class="carrinho text-white" onclick="addToCart(<?= $produtos->Id ?>, '<?= $produtos->Nome ?>', <?= $produtos->Preco ?>)">
                                             <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                                         </button>
                                         <button class="detalhes margin-top-5">
-                                            <a href="instrumentos_detalhes.php?Id=<?= $produtos->Id ?>" style="font-size: 1.2rem;">Detalhes</a>
+                                            <a href="instrumentos_detalhes.php?Id=<?= $produtos->Id ?>" style="font-size: 1.2rem; text-decoration: none; color: white">Detalhes</a>
                                         </button>
                                     </div>
                                 </div>

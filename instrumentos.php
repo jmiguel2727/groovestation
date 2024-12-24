@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitarras</title>
+    <title>Instrumentos</title>
 
     <?php include('includes/linkscss.php') ?>
 </head>
@@ -13,19 +13,19 @@
     <?php include('includes/connection.php') ?>
 
     <!-- Lista de Guitarras -->
-    <div class="container text-center mt-4">
-        <h1 style="font-size: 2.2rem;">Guitarras</h1>
+    <div class="container text-center mt-5">
+        <h1 style="font-size: 2.2rem;">Instrumentos</h1>
     </div>
 
-    <main class="container">
+    <main class="container mt-4">
         <div class="p-5 rounded">
                 
-            <h1 class="h4 font-weight-bold mb-2">Guitarras: Descubra os melhores preços</h1>
+            <h1 class="h4 font-weight-bold mb-2">Instrumentos: Descubra os melhores preços</h1>
             <p class="text-muted mb-4">Explore ritmos envolventes com as nossos produtos de altíssima qualidade.</p>
 
             <div class="row">
                 <?php 
-                    $sql = 'SELECT * FROM produtos WHERE tipo = 1';
+                    $sql = 'SELECT * FROM produtos';
                     $stmt = $dbh->prepare($sql);
                     $stmt->execute();
 
@@ -39,11 +39,11 @@
                                     <div class="card-body text-center">
                                         <p class="card-text"><?= $produtos->Nome ?></p>
                                         <p class="card-text"><?= $produtos->Preco ?> € </p>
-                                        <button class="carrinho text-white" onclick="addToCart(<?= $produtos->Id ?>, '<?= $produtos->Nome ?>', <?= $produtos->Preco ?>)">
+                                        <button class="carrinho text-white">
                                             <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
                                         </button>
-                                        <button class="detalhes margin-top-5 ">
-                                            <a href="instrumentos_detalhes.php?Id=<?= $produtos->Id ?>" style="font-size: 1.2rem; text-decoration: none; color: white">Detalhes</a>
+                                        <button class="detalhes margin-top-5">
+                                            <a href="instrumentos_detalhes.php?Id=<?= $produtos->Id ?>" style="font-size: 1.2rem;">Detalhes</a>
                                         </button>
                                     </div>
                                 </div>

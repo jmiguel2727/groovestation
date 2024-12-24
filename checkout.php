@@ -55,7 +55,7 @@
                     </form>
                 </div>
                 <div class="col-md-4 col-lg-4 mb-4">
-                    <p class="card-text detalhes-preco">2000 € </p>
+                    <p class="card-text detalhes-preco"> € </p>
                     <button class="finalizar mt-4 text-white">Finalizar Compra</button>
                 </div>
             </div>
