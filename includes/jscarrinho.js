@@ -9,7 +9,7 @@ function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
 }
 
-// Função para adicionar item ao carrinho
+// Função para adicionar item ao carrinho e salvar no banco de dados
 function addToCart(id, name, price) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const itemIndex = cart.findIndex(item => item.id === id);
@@ -21,6 +21,19 @@ function addToCart(id, name, price) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Atualiza no banco de dados via AJAX
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "includes/updateproduto.inc.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify({ action: "add", productId: id, quantity: 1 }));
+
+    xhr.onload = function () {
+        if (xhr.status !== 200) {
+            alert("Erro ao atualizar o carrinho no banco de dados.");
+        }
+    };
+
     updateCart();
 }
 
@@ -29,22 +42,18 @@ function updateCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItemsContainer = document.getElementById('cart-items');
     const cartTotalContainer = document.getElementById('cart-total');
-    const cartCountContainer = document.getElementById('cart-count'); 
-    
-    cartItemsContainer.innerHTML = ''; // Limpa os itens do carrinho
     let total = 0;
-    let totalItems = 0; // Variável para contar o total de itens
+
+    cartItemsContainer.innerHTML = ''; // Limpa os itens do carrinho
 
     cart.forEach((item, index) => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
-        totalItems += item.quantity; // Incrementa o total de itens
+
         cartItemsContainer.innerHTML += `
             <div class="d-flex justify-content-between align-items-center mb-2">
-                <div>
-                    ${item.name}: ${item.quantity}x  = ${itemTotal}€
-                </div>
-                <button class="btn btn-sm" onclick="removeFromCart(${index})">
+                <div>${item.name}: ${item.quantity}x = ${itemTotal}€</div>
+                <button class="btn btn-sm" onclick="removeFromCart(${index}, ${item.id})">
                     <i class="bi bi-trash3"></i>
                 </button>
             </div>
@@ -52,28 +61,33 @@ function updateCart() {
     });
 
     cartTotalContainer.innerHTML = `Total: ${total} €`;
-    
-    // Contador de items carrinho
-    const cartCountLarge = document.getElementById('cart-count'); // Contador para telas grandes
-    const cartCountSmall = document.getElementById('cart-count-small'); // Contador para telas pequenas
-    const displayCount = totalItems > 0 ? totalItems : '';
-    // Atualiza ambos os contadores
-    cartCountLarge.textContent = displayCount;
-    cartCountSmall.textContent = displayCount;
 }
 
-// Função para remover 1 item do carrinho
-function removeFromCart(index) {
+// Função para remover item do carrinho e do banco de dados
+function removeFromCart(index, productId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
+
     if (cart[index].quantity > 1) {
         cart[index].quantity -= 1; // Diminui a quantidade se for maior que 1
     } else {
         cart.splice(index, 1); // Remove o item se a quantidade for 1
     }
-    
-    localStorage.setItem('cart', JSON.stringify(cart)); // Atualiza o localStorage
-    updateCart(); // Atualiza a exibição do carrinho
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Atualiza no banco de dados via AJAX
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "includes/updateproduto.inc.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify({ action: "remove", productId }));
+
+    xhr.onload = function () {
+        if (xhr.status !== 200) {
+            alert("Erro ao remover o item no banco de dados.");
+        }
+    };
+
+    updateCart();
 }
 
 // Chama a função para atualizar o carrinho ao carregar a página

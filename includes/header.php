@@ -22,7 +22,6 @@
                 <span style="font-size: 1rem;" class="me-2">PT-EUR</span>
                 <button class="btn" onclick="openSideBar()">   
                     <i class="icon-cart bi-cart2" style="font-size: 1.9rem;"></i>
-                    <span id="cart-count-small" class="badge bg-danger cart-count">0</span>
                 </button>
                 <!-- Botão menu -->
                 <button class="btn btn-link text-white ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-expanded="false" aria-controls="navbarResponsive">
@@ -47,7 +46,6 @@
             <span style="font-size: 1rem;" class="me-2">PT-EUR</span>
             <button class="btn" onclick="openSideBar()">
                 <i class="icon-cart bi-cart2" style="font-size: 1.9rem;"></i>
-                <span id="cart-count" class="badge bg-danger cart-count">0</span>
             </button>
         </div>
     </div>

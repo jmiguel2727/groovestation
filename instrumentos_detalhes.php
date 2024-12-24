@@ -55,14 +55,8 @@ if(empty($_GET['Id'])){
                 <div class="col-md-4 col-lg-4 mb-4">
                     <div class="card ">
                         <div class="card-body text-center">
-                            <p class="card-text"><?= $produto->Descricao ?></p>
+                            <p class="card-text" style="font-size: 1.2rem;"><?= $produto->Descricao ?></p>
                             <p class="card-text detalhes-preco text-center"><?= $produto->Preco ?> € </p>
-                            <form action="includes/updateproduto.inc.php" method="post">
-                                <button class="carrinho text-white" type="submit">
-                                    <i class="bi bi-cart3" style="font-size: 1.2rem;"></i>
-                                </button>
-                                <input type="hidden" name="produto_id" value="<?= $produto->Id ?>"/>
-                            </form>
                         </div>
                     </div>
                 </div>
