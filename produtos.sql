@@ -45,14 +45,14 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   `Preco` float DEFAULT NULL COMMENT 'Preço em €',
   `Descricao` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Imagem` varchar(50) DEFAULT NULL,
-  `Quantidade` int DEFAULT '0' COMMENT '0-Não selecionado;1-Selecionado;',
+  `Quantidade` int DEFAULT '0' COMMENT 'Quantidade do produto no carrinho.',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- A despejar dados para tabela groovestationbd.produtos: ~32 rows (aproximadamente)
 INSERT INTO `produtos` (`Id`, `Tipo`, `Nome`, `Preco`, `Descricao`, `Imagem`, `Quantidade`) VALUES
 	(1, 1, 'Guitarra Tipo ST', 690, 'Versátil, sons nítidos e ajustáveis.', 'GuitarraST.png', 0),
-	(2, 1, 'Guitarra Tipo LP', 990, 'Som poderoso, ideal para rock e metal.', 'GuitarraLP.png', 0),
+	(2, 1, 'Guitarra Tipo LP', 990, 'Som poderoso, ideal para rock e metal.', 'GuitarraLP.png', 1),
 	(3, 1, 'Guitarra Tipo SG', 700, 'Estilo agressivo e som potente para solos.', 'GuitarraSG.png', 0),
 	(4, 1, 'Guitarra Hollowbody', 900, 'Sons quentes e ressonantes, ideal para jazz.', 'GuitarraHollowbody.png', 0),
 	(5, 1, 'Guitarra Clássica', 100, 'Sons suaves, ideal para música clássica.', 'GuitarraClassica.png', 0),
