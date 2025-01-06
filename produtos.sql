@@ -15,11 +15,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- A despejar estrutura da base de dados para groovestationbd
-CREATE DATABASE IF NOT EXISTS `groovestationbd` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `groovestationbd`;
+-- A despejar estrutura da base de dados para grupo205
+CREATE DATABASE IF NOT EXISTS `grupo205` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `grupo205`;
 
--- A despejar estrutura para tabela groovestationbd.compras
+-- A despejar estrutura para tabela grupo205.compras
 CREATE TABLE IF NOT EXISTS `compras` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `Produto_Id` int NOT NULL,
@@ -35,9 +35,9 @@ CREATE TABLE IF NOT EXISTS `compras` (
   KEY `Produto_Id` (`Produto_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- A despejar dados para tabela groovestationbd.compras: ~0 rows (aproximadamente)
+-- A despejar dados para tabela grupo205.compras: ~0 rows (aproximadamente)
 
--- A despejar estrutura para tabela groovestationbd.produtos
+-- A despejar estrutura para tabela grupo205.produtos
 CREATE TABLE IF NOT EXISTS `produtos` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `Tipo` int DEFAULT NULL COMMENT '1-Guitarras;2-Baterias;3-Teclados;4-Sopros;',
@@ -49,10 +49,10 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- A despejar dados para tabela groovestationbd.produtos: ~32 rows (aproximadamente)
+-- A despejar dados para tabela grupo205.produtos: ~32 rows (aproximadamente)
 INSERT INTO `produtos` (`Id`, `Tipo`, `Nome`, `Preco`, `Descricao`, `Imagem`, `Quantidade`) VALUES
 	(1, 1, 'Guitarra Tipo ST', 690, 'Versátil, sons nítidos e ajustáveis.', 'GuitarraST.png', 0),
-	(2, 1, 'Guitarra Tipo LP', 990, 'Som poderoso, ideal para rock e metal.', 'GuitarraLP.png', 1),
+	(2, 1, 'Guitarra Tipo LP', 990, 'Som poderoso, ideal para rock e metal.', 'GuitarraLP.png', 0),
 	(3, 1, 'Guitarra Tipo SG', 700, 'Estilo agressivo e som potente para solos.', 'GuitarraSG.png', 0),
 	(4, 1, 'Guitarra Hollowbody', 900, 'Sons quentes e ressonantes, ideal para jazz.', 'GuitarraHollowbody.png', 0),
 	(5, 1, 'Guitarra Clássica', 100, 'Sons suaves, ideal para música clássica.', 'GuitarraClassica.png', 0),
@@ -60,9 +60,9 @@ INSERT INTO `produtos` (`Id`, `Tipo`, `Nome`, `Preco`, `Descricao`, `Imagem`, `Q
 	(7, 1, 'Guitarra Roundback', 200, 'Conforto e som brilhante para diversos estilos.', 'GuitarraRoundback.png', 0),
 	(8, 1, 'Guitarra 12 cordas', 190, 'Som rico com 12 cordas, excelente para palco.', 'Guitarra12Cordas.png', 0),
 	(9, 2, 'Timbalão Pequeno', 200, 'Compacto, som vibrante e fácil de transportar.', 'TimbalaoPequeno.png', 0),
-	(10, 2, 'Bateria Acústica', 700, 'Bateria com som rico e poderoso, ideal para palco.', 'BateriaAcustica.png', 0),
-	(11, 2, 'Bateria Digital', 600, 'Prática silenciosa, sons personalizáveis.', 'BateriaDigital.png', 0),
-	(12, 2, 'Acessório', 100, 'Ferramenta essencial para ajustes de instrumentos.', 'Acessorio.png', 0),
+	(10, 2, 'Bateria Acústica', 700, 'Bateria com som rico e poderoso, ideal para palco.', 'BateriaAcustica.png', 1),
+	(11, 2, 'Bateria Digital', 600, 'Prática silenciosa, sons personalizáveis.', 'BateriaDigital.png', 4),
+	(12, 2, 'Acessório', 100, 'Ferramenta essencial para ajustes de instrumentos.', 'Acessorio.png', 2),
 	(13, 2, 'Bateria Clássica', 1000, 'Bateria tradicional, som equilibrado e versátil.', 'BateriaClassica.png', 0),
 	(14, 2, 'Timbalão', 300, 'Graves profundos, ideal para samba.', 'Timbalao.png', 0),
 	(15, 2, 'Tarola', 400, 'Som agudo e nítido, essencial para ritmos.', 'Tarola.png', 0),

@@ -16,7 +16,7 @@
             <h2 class="text-center mb-4" style="font-weight: bold;">Dados de Faturação</h2>
             <div class="row">
                 <!-- Formulário de Dados do Cliente -->
-                <div class="checkout-container col-md-8 col-lg-4 mb-4 mt-3">
+                <div class="checkout-container col-md-8 col-lg-6 mb-4 mt-3">
                     <form id="billing-form">
                         <div class="form-row mb-3">
                             <div class="form-group col-6">
@@ -58,7 +58,7 @@
                 </div>
 
                 <!-- Resumo do Carrinho -->
-                <div class="col-md-4 col-lg-6 mb-4">
+                <div class="col-lg-6 mb-4">
                     <h3 class="text-center">Resumo do Carrinho</h3>
                     <div id="cart-items-checkout" class="overflow-y-auto" style="height: 70vh; padding: 20px;"></div>
                     <div id="cart-total-checkout" style="padding: 20px; font-size: 25px">Total: 0 €</div>
