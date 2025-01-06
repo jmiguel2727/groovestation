@@ -20,7 +20,7 @@ try {
     $cliente = $data['cliente'];
     $cart = $data['cart'];
 
-    // Simulação de sucesso
+    // sucesso
     $response = [
         'success' => true,
         'message' => 'Compra finalizada com sucesso!'

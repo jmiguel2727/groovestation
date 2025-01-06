@@ -67,5 +67,6 @@
     <a href="checkout.php" class="btn btn-lg text-white" style="position: absolute; background-color: #2b5d8e; bottom: 10px; left: 10px; right: 10px;">Comprar</a>
 </div>
 
+
 <script src="includes/jscarrinho.js">// script jscarrinho.js</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- script do bootstrap -->

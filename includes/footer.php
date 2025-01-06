@@ -1,4 +1,5 @@
-<footer class="bg-black">    
+<footer class="bg-black">  
+
     <div class="container mx-auto py-2 row">
         <!-- Coluna do Logo -->
         <div class="col-md-4 text-center py-3">
@@ -35,7 +36,8 @@
             <p>© 2024 João Luís | José Menezes  </p>
             <p>Groove Station you, because you rock!</p>
         </div>
-    </div>        
+    </div>    
+        
 </footer>
 
 

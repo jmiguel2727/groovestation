@@ -23,6 +23,7 @@ function loadCartForCheckout() {
     }
 }
 
+
 // Finalizar compra
 function finalizarCompra() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];

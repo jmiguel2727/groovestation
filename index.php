@@ -11,7 +11,6 @@
     
     <?php include('includes/header.php') ?>
 
-    
    <!-- Frase de boas-vindas -->
    <div class="container text-center mt-5">
         <h1>Bem-vindo(a) à Groove Station!</h1>

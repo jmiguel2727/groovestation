@@ -90,5 +90,6 @@ function removeFromCart(index, productId) {
     updateCart();
 }
 
+
 // Chama a função para atualizar o carrinho ao carregar a página
 document.addEventListener('DOMContentLoaded', updateCart);
