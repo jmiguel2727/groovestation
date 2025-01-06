@@ -11,12 +11,12 @@
 <body>
     <?php include('includes/header.php') ?>
 
-    <main class="container mt-3">
+    <main class="container mt-3 mb-4 ">
         <div class="p-3 rounded">
             <h2 class="text-center mb-4" style="font-weight: bold;">Dados de Faturação</h2>
             <div class="row">
                 <!-- Formulário de Dados do Cliente -->
-                <div class="checkout-container col-md-8 col-lg-6 mb-4 mt-3">
+                <div class="checkout-container col-md-8 col-lg-6 mt-3">
                     <form id="billing-form">
                         <div class="form-row mb-3">
                             <div class="form-group col-6">

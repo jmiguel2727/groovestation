@@ -69,6 +69,6 @@
 /* Media query para telas menores */
 @media (max-width: 768px) {
     .sidebar {
-        width: 40% !important; /* Largura de 45% em telas menores */
+        width: 40% !important; /* Largura de 40% em telas menores */
     }
 }
