@@ -15,48 +15,48 @@
             <h2 class="text-center mb-4" style="font-weight: bold;">Dados de Faturação</h2>
             <div class="row">
                 <!-- Formulário de Dados do Cliente -->
-<div class="checkout-container col-md-8 col-lg-4 mb-4 mt-3">
-    <form id="billing-form" action="includes/checkout.php" method="POST">
-        <input id="compraId" type="hidden" value="xyz" name="compraId">
-        <div class="form-row mb-3">
-            <div class="form-group col-6">
-                <label for="nome">Nome *</label>
-                <input type="text" class="form-control" name="nome" id="nome" required>
-            </div>
-            <div class="form-group col-6">
-                <label for="apelido">Apelido *</label>
-                <input type="text" class="form-control" name="apelido" id="apelido" required>
-            </div>
-        </div>
-        <div class="form-group mb-3">
-            <label for="contacto">Contacto *</label>
-            <input type="text" class="form-control" name="contacto" id="contacto" required>
-        </div>
-        <div class="form-group mb-3">
-            <label for="email">Email *</label>
-            <input type="email" class="form-control" name="email" id="email" required>
-        </div>
-        <div class="form-group mb-3">
-            <label for="morada">Morada *</label>
-            <input type="text" class="form-control" name="morada" id="morada" required>
-        </div>
-        <div class="form-row mb-3">
-            <div class="form-group col-6">
-                <label for="codigoPostal">Código Postal *</label>
-                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" required>
-            </div>
-            <div class="form-group col-6">
-                <label for="localidade">Localidade *</label>
-                <input type="text" class="form-control" name="localidade" id="localidade" required>
-            </div>
-        </div>
-        <div class="form-group mb-3">
-            <label for="nif">NIF</label>
-            <input type="text" class="form-control" name="nif" id="nif">
-        </div>
-        <button type="submit" class="finalizar mt-4 text-white">Finalizar Compra</button>
-    </form>
-</div>
+                <div class="checkout-container col-md-8 col-lg-4 mb-4 mt-3">
+                    <form id="billing-form" action="includes/checkout.php" method="POST">
+                        <input id="compraId" type="hidden" value="xyz" name="compraId">
+                        <div class="form-row mb-3">
+                            <div class="form-group col-6">
+                                <label for="nome">Nome *</label>
+                                <input type="text" class="form-control" name="nome" id="nome" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="apelido">Apelido *</label>
+                                <input type="text" class="form-control" name="apelido" id="apelido" required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="contacto">Contacto *</label>
+                            <input type="text" class="form-control" name="contacto" id="contacto" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Email *</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="morada">Morada *</label>
+                            <input type="text" class="form-control" name="morada" id="morada" required>
+                        </div>
+                        <div class="form-row mb-3">
+                            <div class="form-group col-6">
+                                <label for="codigoPostal">Código Postal *</label>
+                                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" required>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="localidade">Localidade *</label>
+                                <input type="text" class="form-control" name="localidade" id="localidade" required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="nif">NIF</label>
+                            <input type="text" class="form-control" name="nif" id="nif">
+                        </div>
+                        <button type="submit" class="finalizar mt-4 text-white">Finalizar Compra</button>
+                    </form>
+                </div>
 
                 <!-- Resumo do Carrinho -->
                 <div class="col-md-4 col-lg-6 mb-4">
