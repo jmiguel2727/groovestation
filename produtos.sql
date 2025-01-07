@@ -19,10 +19,21 @@
 CREATE DATABASE IF NOT EXISTS `grupo205` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `grupo205`;
 
+-- A despejar estrutura para tabela grupo205.artigos_compra
+CREATE TABLE IF NOT EXISTS `artigos_compra` (
+  `compra_id` int NOT NULL AUTO_INCREMENT,
+  `produto_id` varchar(50) DEFAULT NULL,
+  `quantidade` int DEFAULT NULL,
+  PRIMARY KEY (`compra_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- A despejar dados para tabela grupo205.artigos_compra: ~0 rows (aproximadamente)
+
 -- A despejar estrutura para tabela grupo205.compras
 CREATE TABLE IF NOT EXISTS `compras` (
   `Id` int NOT NULL AUTO_INCREMENT,
-  `Produto_Id` int NOT NULL,
+  `Produto_Id` int NOT NULL DEFAULT '0',
+  `compra_id` varchar(50) DEFAULT NULL,
   `Nome` varchar(50) DEFAULT NULL,
   `Apelido` varchar(50) DEFAULT NULL,
   `Contacto` varchar(50) DEFAULT NULL,
@@ -33,9 +44,11 @@ CREATE TABLE IF NOT EXISTS `compras` (
   `NIF` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `Produto_Id` (`Produto_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- A despejar dados para tabela grupo205.compras: ~0 rows (aproximadamente)
+INSERT INTO `compras` (`Id`, `Produto_Id`, `compra_id`, `Nome`, `Apelido`, `Contacto`, `Email`, `Morada`, `CodigoPostal`, `Localidade`, `NIF`) VALUES
+	(12, 0, 'zzz', 'ze', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- A despejar estrutura para tabela grupo205.produtos
 CREATE TABLE IF NOT EXISTS `produtos` (
@@ -45,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   `Preco` float DEFAULT NULL COMMENT 'Preço em €',
   `Descricao` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Imagem` varchar(50) DEFAULT NULL,
-  `Quantidade` int DEFAULT '0' COMMENT 'Quantidade do produto no carrinho.',
+  `Quantidade` int DEFAULT NULL COMMENT 'Quantidade do produto no carrinho.',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -60,9 +73,9 @@ INSERT INTO `produtos` (`Id`, `Tipo`, `Nome`, `Preco`, `Descricao`, `Imagem`, `Q
 	(7, 1, 'Guitarra Roundback', 200, 'Conforto e som brilhante para diversos estilos.', 'GuitarraRoundback.png', 0),
 	(8, 1, 'Guitarra 12 cordas', 190, 'Som rico com 12 cordas, excelente para palco.', 'Guitarra12Cordas.png', 0),
 	(9, 2, 'Timbalão Pequeno', 200, 'Compacto, som vibrante e fácil de transportar.', 'TimbalaoPequeno.png', 0),
-	(10, 2, 'Bateria Acústica', 700, 'Bateria com som rico e poderoso, ideal para palco.', 'BateriaAcustica.png', 1),
-	(11, 2, 'Bateria Digital', 600, 'Prática silenciosa, sons personalizáveis.', 'BateriaDigital.png', 4),
-	(12, 2, 'Acessório', 100, 'Ferramenta essencial para ajustes de instrumentos.', 'Acessorio.png', 2),
+	(10, 2, 'Bateria Acústica', 700, 'Bateria com som rico e poderoso, ideal para palco.', 'BateriaAcustica.png', 0),
+	(11, 2, 'Bateria Digital', 600, 'Prática silenciosa, sons personalizáveis.', 'BateriaDigital.png', 0),
+	(12, 2, 'Acessório', 100, 'Ferramenta essencial para ajustes de instrumentos.', 'Acessorio.png', 0),
 	(13, 2, 'Bateria Clássica', 1000, 'Bateria tradicional, som equilibrado e versátil.', 'BateriaClassica.png', 0),
 	(14, 2, 'Timbalão', 300, 'Graves profundos, ideal para samba.', 'Timbalao.png', 0),
 	(15, 2, 'Tarola', 400, 'Som agudo e nítido, essencial para ritmos.', 'Tarola.png', 0),
