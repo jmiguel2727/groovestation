@@ -1,48 +1,41 @@
-
 <?php
-if(!empty($_GET['nome'])) $nome = $_GET['nome'];
-else $nome = null;
-echo $nome;
+// Verifica se o método de requisição é POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Inclui o arquivo de conexão com o banco de dados
+    include('connection.php');
 
-if(!empty($_GET['apelido'])) $apelido = $_GET['apelido'];
-else $apelido = null;
-echo $apelido;
+    // Obtém os dados do formulário
+    $nome = $_POST['nome'];
+    $apelido = $_POST['apelido'];
+    $contacto = $_POST['contacto'];
+    $email = $_POST['email'];
+    $morada = $_POST['morada'];
+    $codigopostal = $_POST['codigoPostal'];
+    $localidade = $_POST['localidade'];
+    $nif = $_POST['nif'];
+    $compraId = $_POST['compraId'];
 
-if(!empty($_GET['contacto'])) $contacto = $_GET['contacto'];
-else $contacto = null;
-echo $contacto;
+    // Prepara a query SQL para inserir os dados na tabela compras
+    $query = "INSERT INTO compras (compra_id, nome, apelido, contacto, email, morada, codigopostal, localidade, nif) 
+              VALUES (:compraId, :nome, :apelido, :contacto, :email, :morada, :codigopostal, :localidade, :nif)";
 
-if(!empty($_GET['email'])) $email = $_GET['email'];
-else $email = null;
-echo $email;
+    // Prepara e executa a query usando PDO
+    try {
+        $stmt = $dbh->prepare($query);
+        $stmt->bindParam(':compraId', $compraId);
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':apelido', $apelido);
+        $stmt->bindParam(':contacto', $contacto);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':morada', $morada);
+        $stmt->bindParam(':codigopostal', $codigopostal);
+        $stmt->bindParam(':localidade', $localidade);
+        $stmt->bindParam(':nif', $nif);
+        $stmt->execute();
 
-if(!empty($_GET['morada'])) $morada = $_GET['morada'];
-else $morada = null;
-echo $morada;
-
-if(!empty($_GET['codigopostal'])) $codigopostal = $_GET['codigoPostal'];
-else $codigopostal = null;
-echo $codigopostal;
-
-if(!empty($_GET['localidade'])) $localidade = $_GET['localidade'];
-else $localidade = null;
-echo $localidade;
-
-if(!empty($_GET['nif'])) $nif = $_GET['nif'];
-else $nif = null;
-echo $nif;
-
-if(!empty($_GET['compraId'])) $compraId = $_GET['compraId'];
-else $compraId = null;
-echo $compraId;
-
-
-
-include('connection.php');
-
-
-$query = "INSERT INTO compras(compra_id, nome)  VALUES(:C, :N)";
-$stmt = $dbh->prepare($query);
-$stmt->bindValue(':C', $compraId);
-$stmt->bindValue(':N', $nome);
-$stmt->execute();
+        echo "Dados inseridos com sucesso!";
+    } catch (PDOException $e) {
+        echo "Erro ao inserir dados: " . $e->getMessage();
+    }
+}
+?>
