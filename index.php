@@ -117,7 +117,14 @@
     <?php include('includes/footer.php') ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- script do bootstrap -->
-    
+    <script>
+     // Verifica se a compra foi finalizada
+     if (window.location.search.includes('compra_finalizada=true')) {
+        // Limpa o localStorage
+        localStorage.removeItem('cart');
+        localStorage.removeItem('compraId');
+    }
+    </script>
 </body>
 </html>
 

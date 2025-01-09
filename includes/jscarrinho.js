@@ -1,3 +1,13 @@
+// Função para gerar um ID aleatório
+function generateRandomId(length = 8) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+}
+
 // Função para abrir a sidebar
 function openSideBar() {
     document.getElementById("mySidebar").style.display = "block";
@@ -9,15 +19,22 @@ function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
 }
 
-// Função para adicionar item ao carrinho e salvar no banco de dados
+// Função para adicionar item ao carrinho
 function addToCart(id, name, price) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const itemIndex = cart.findIndex(item => item.id === id);
 
+    // Verifica se já existe um compra_id na localStorage
+    let compraId = localStorage.getItem('compraId');
+    if (!compraId) {
+        compraId = generateRandomId(); // Gera um novo compra_id
+        localStorage.setItem('compraId', compraId); // Armazena o compra_id na localStorage
+    }
+
     if (itemIndex > -1) {
         cart[itemIndex].quantity += 1; // Incrementa a quantidade se já existir
     } else {
-        cart.push({ id, name, price, quantity: 1 }); // Adiciona novo item
+        cart.push({ id, name, price, quantity: 1, compraId }); // Adiciona novo item com compra_id
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -26,7 +43,7 @@ function addToCart(id, name, price) {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "includes/updateproduto.inc.php", true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify({ action: "add", productId: id, quantity: 1 }));
+    xhr.send(JSON.stringify({ action: "add", productId: id, compraId }));
 
     xhr.onload = function () {
         if (xhr.status !== 200) {
@@ -63,7 +80,7 @@ function updateCart() {
     cartTotalContainer.innerHTML = `Total: ${total} €`;
 }
 
-// Função para remover item do carrinho e do banco de dados
+// Função para remover item do carrinho
 function removeFromCart(index, productId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -83,13 +100,12 @@ function removeFromCart(index, productId) {
 
     xhr.onload = function () {
         if (xhr.status !== 200) {
-            alert("Erro ao remover o item no banco de dados.");
+            alert(" Erro ao atualizar o carrinho no banco de dados.");
         }
     };
 
     updateCart();
 }
-
 
 // Chama a função para atualizar o carrinho ao carregar a página
 document.addEventListener('DOMContentLoaded', updateCart);

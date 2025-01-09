@@ -5,11 +5,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include('connection.php');
 
     // Obtém os dados do formulário
-    $nome = $_POST['nome'];
-    $apelido = $_POST['apelido'];
-    $contacto = $_POST['contacto'];
-    $email = $_POST['email'];
-    $morada = $_POST['morada'];
+    $nome       = $_POST['nome'];
+    $apelido    = $_POST['apelido'];
+    $contacto   = $_POST['contacto'];
+    $email      = $_POST['email'];
+    $morada     = $_POST['morada'];
     $codigopostal = $_POST['codigoPostal'];
     $localidade = $_POST['localidade'];
     $nif = $_POST['nif'];
@@ -33,7 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':nif', $nif);
         $stmt->execute();
 
-        echo "Dados inseridos com sucesso!";
+        // Redireciona para a página index.php após a inserção
+        header('Location: ../index.php?compra_finalizada=true');
+        exit(); // Certifique-se de sair do script após o redirecionamento
     } catch (PDOException $e) {
         echo "Erro ao inserir dados: " . $e->getMessage();
     }
