@@ -1,4 +1,4 @@
-<?php include('includes/linkscss.php') ?>
+
 <header style="background-color: #6699cc;">
     <div class="container d-flex justify-content-between align-items-center">
         

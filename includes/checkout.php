@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = "INSERT INTO compras (compra_id, nome, apelido, contacto, email, morada, codigopostal, localidade, nif) 
               VALUES (:compraId, :nome, :apelido, :contacto, :email, :morada, :codigopostal, :localidade, :nif)";
 
-    // Prepara e executa a query usando PDO
+    
     try {
         $stmt = $dbh->prepare($query);
         $stmt->bindParam(':compraId', $compraId);
