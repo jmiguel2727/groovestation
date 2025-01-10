@@ -118,13 +118,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- script do bootstrap -->
     <script>
-     // Verifica se a compra foi finalizada
-     if (window.location.search.includes('compra_finalizada=true')) {
-        // Limpa o localStorage
+    // Verifica se a compra foi finalizada
+    if (window.location.search.includes('compra_finalizada=true')) {
+        // Exibe o alerta
+        alert('Compra bem sucedida! Obrigado por comprar na Groove Station.');
+
+        // Limpa o localStorage após o alerta
         localStorage.removeItem('cart');
         localStorage.removeItem('compraId');
     }
-    </script>
+</script>
 </body>
 </html>
 
