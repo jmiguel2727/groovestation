@@ -23,33 +23,33 @@
                         <div class="form-row mb-3">
                             <div class="form-group col-6">
                                 <label for="nome">Nome *</label>
-                                <input type="text" class="form-control" name="nome" id="nome" required>
+                                <input type="text" class="form-control" name="nome" id="nome" >
                             </div>
                             <div class="form-group col-6">
                                 <label for="apelido">Apelido *</label>
-                                <input type="text" class="form-control" name="apelido" id="apelido" required>
+                                <input type="text" class="form-control" name="apelido" id="apelido" >
                             </div>
                         </div>
                         <div class="form-group mb-3">
                             <label for="contacto">Contacto *</label>
-                            <input type="text" class="form-control" name="contacto" id="contacto" required>
+                            <input type="text" class="form-control" name="contacto" id="contacto" >
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email *</label>
-                            <input type="email" class="form-control" name="email" id="email" required>
+                            <input type="email" class="form-control" name="email" id="email" >
                         </div>
                         <div class="form-group mb-3">
                             <label for="morada">Morada *</label>
-                            <input type="text" class="form-control" name="morada" id="morada" required>
+                            <input type="text" class="form-control" name="morada" id="morada" >
                         </div>
                         <div class="form-row mb-3">
                             <div class="form-group col-6">
                                 <label for="codigoPostal">Código Postal *</label>
-                                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" required>
+                                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" >
                             </div>
                             <div class="form-group col-6">
                                 <label for="localidade">Localidade *</label>
-                                <input type="text" class="form-control" name="localidade" id="localidade" required>
+                                <input type="text" class="form-control" name="localidade" id="localidade" >
                             </div>
                         </div>
                         <div class="form-group mb-3">

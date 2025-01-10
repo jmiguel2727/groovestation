@@ -1,6 +1,6 @@
 <?php
 include('connection.php');
-
+// Obtém os dados do corpo da requisição como JSON
 $data = json_decode(file_get_contents('php://input'), true);
 
 if (isset($data['action']) && isset($data['productId'])) {

@@ -39,17 +39,44 @@ function addToCart(id, name, price) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Atualiza no banco de dados via AJAX
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "includes/updateproduto.inc.php", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify({ action: "add", productId: id, compraId }));
+    // Atualiza no banco de dados via Fetch API
+    fetch('includes/updateproduto.inc.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ action: "add", productId: id, compraId })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erro ao atualizar o carrinho no banco de dados:', error));
 
-    xhr.onload = function () {
-        if (xhr.status !== 200) {
-            alert("Erro ao atualizar o carrinho no banco de dados.");
-        }
-    };
+    updateCart();
+}
+
+// Função para remover item do carrinho
+function removeFromCart(index, productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1; // Diminui a quantidade se for maior que 1
+    } else {
+        cart.splice(index, 1); // Remove o item se a quantidade for 1
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Atualiza no banco de dados via Fetch API
+    fetch('includes/updateproduto.inc.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ action: "remove", productId })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erro ao atualizar o carrinho no banco de dados:', error));
 
     updateCart();
 }
@@ -78,33 +105,6 @@ function updateCart() {
     });
 
     cartTotalContainer.innerHTML = `Total: ${total} €`;
-}
-
-// Função para remover item do carrinho
-function removeFromCart(index, productId) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    if (cart[index].quantity > 1) {
-        cart[index].quantity -= 1; // Diminui a quantidade se for maior que 1
-    } else {
-        cart.splice(index, 1); // Remove o item se a quantidade for 1
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Atualiza no banco de dados via AJAX
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "includes/updateproduto.inc.php", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify({ action: "remove", productId }));
-
-    xhr.onload = function () {
-        if (xhr.status !== 200) {
-            alert(" Erro ao atualizar o carrinho no banco de dados.");
-        }
-    };
-
-    updateCart();
 }
 
 // Chama a função para atualizar o carrinho ao carregar a página
