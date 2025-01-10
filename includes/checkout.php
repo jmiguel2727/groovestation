@@ -1,7 +1,5 @@
 <?php
-// Verifica se o método de requisição é POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Inclui o arquivo de conexão com o banco de dados
     include('connection.php');
 
     // Obtém os dados do formulário
@@ -14,12 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $localidade = $_POST['localidade'];
     $nif = $_POST['nif'];
     $compraId = $_POST['compraId'];
+    $cartItems = json_decode($_POST['cartItems'], true);
 
-    // Prepara a query SQL para inserir os dados na tabela compras
+    // Insere os dados da compra na tabela compras
     $query = "INSERT INTO compras (compra_id, nome, apelido, contacto, email, morada, codigopostal, localidade, nif) 
               VALUES (:compraId, :nome, :apelido, :contacto, :email, :morada, :codigopostal, :localidade, :nif)";
 
-    
     try {
         $stmt = $dbh->prepare($query);
         $stmt->bindParam(':compraId', $compraId);
@@ -33,11 +31,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':nif', $nif);
         $stmt->execute();
 
-        // Redireciona para a página index.php após a inserção
-        header('Location: ../index.php?compra_finalizada=true');
-        exit(); // Certifique-se de sair do script após o redirecionamento
+        // Insere os itens do carrinho na tabela artigos_compra
+        foreach ($cartItems as $item) {
+            $queryItem = "INSERT INTO artigos_compra (compra_id, produto_id, quantidade) 
+                          VALUES (:compraId, :produtoId, :quantidade)";
+            $stmtItem = $dbh->prepare($queryItem);
+            $stmtItem->bindParam(':compraId', $compraId);
+            $stmtItem->bindParam(':produtoId', $item['id']);
+            $stmtItem->bindParam(':quantidade', $item['quantity']);
+            $stmtItem->execute();
+        }
+
+        // Limpa o carrinho após a compra
+        echo "<script>localStorage.removeItem('cart'); localStorage.removeItem('compraId');</script>";
+
+        // Redireciona para index.php com um parâmetro na URL
+        header("Location: ../index.php?compra_finalizada=true");
+        exit(); // Certifique-se de que o script pare de ser executado após o redirecionamento
     } catch (PDOException $e) {
-        echo "Erro ao inserir dados: " . $e->getMessage();
+        echo "Erro: " . $e->getMessage();
     }
 }
 ?>

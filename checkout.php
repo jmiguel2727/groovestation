@@ -6,7 +6,6 @@
     <title>Checkout</title>
     <?php include('includes/linkscss.php') ?>
 </head>
-
 <body>
     <?php include('includes/header.php') ?>
 
@@ -16,40 +15,43 @@
             <div class="row">
                 <!-- Formulário de Dados do Cliente -->
                 <div class="checkout-container col-md-8 col-lg-4 mb-4 mt-3">
-                    <form id="billing-form" action="includes/checkout.php" method="POST" onsubmit="clearLocalStorageAndRedirect()">
-
-                        <input id="compraId" type="hidden" value="" name="compraId">
-                    
+                    <form id="billing-form" action="includes/checkout.php" method="POST">
+                        <!-- Input oculto para enviar os itens do carrinho -->
+                        <input type="hidden" name="cartItems" id="cartItems">
+                        <!-- Input oculto para enviar o compraId -->
+                        <input type="hidden" name="compraId" id="compraId" value="<?php echo $_POST['compraId'] ?? ''; ?>">
+                        
+                        <!-- Campos do formulário -->
                         <div class="form-row mb-3">
                             <div class="form-group col-6">
                                 <label for="nome">Nome *</label>
-                                <input type="text" class="form-control" name="nome" id="nome" >
+                                <input type="text" class="form-control" name="nome" id="nome" required>
                             </div>
                             <div class="form-group col-6">
                                 <label for="apelido">Apelido *</label>
-                                <input type="text" class="form-control" name="apelido" id="apelido" >
+                                <input type="text" class="form-control" name="apelido" id="apelido" required>
                             </div>
                         </div>
                         <div class="form-group mb-3">
                             <label for="contacto">Contacto *</label>
-                            <input type="text" class="form-control" name="contacto" id="contacto" >
+                            <input type="text" class="form-control" name="contacto" id="contacto" required>
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email *</label>
-                            <input type="email" class="form-control" name="email" id="email" >
+                            <input type="email" class="form-control" name="email" id="email" required>
                         </div>
                         <div class="form-group mb-3">
                             <label for="morada">Morada *</label>
-                            <input type="text" class="form-control" name="morada" id="morada" >
+                            <input type="text" class="form-control" name="morada" id="morada" required>
                         </div>
                         <div class="form-row mb-3">
                             <div class="form-group col-6">
                                 <label for="codigoPostal">Código Postal *</label>
-                                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" >
+                                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" required>
                             </div>
                             <div class="form-group col-6">
                                 <label for="localidade">Localidade *</label>
-                                <input type="text" class="form-control" name="localidade" id="localidade" >
+                                <input type="text" class="form-control" name="localidade" id="localidade" required>
                             </div>
                         </div>
                         <div class="form-group mb-3">
@@ -71,66 +73,7 @@
     </main>
 
     <?php include('includes/footer.php') ?>
+    <script src="includes/jscheckout.js">// script jscarrinho.js</script>
 
-   
-   <!-- Script para carregar o carrinho e preencher o compraId -->
-   <script>
-        // Função para gerar um ID aleatório
-        function generateRandomId(length = 8) {
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let result = '';
-            for (let i = 0; i < length; i++) {
-                result += characters.charAt (Math.floor(Math.random() * characters.length));
-            }
-            return result;
-        }
-
-        // Recuperar o compra_id da localStorage
-        const compraId = localStorage.getItem('compraId');
-
-        // Preencher o campo compraId no formulário de checkout
-        document.getElementById('compraId').value = compraId;
-
-        // Caso não exista, gerar um novo compra_id
-        if (!compraId) {
-            const newCompraId = generateRandomId();
-            localStorage.setItem('compraId', newCompraId);
-            document.getElementById('compraId').value = newCompraId;
-        }
-
-        // Função para atualizar o resumo do carrinho
-        function updateCartSummary() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const cartItemsContainer = document.getElementById('cart-items-checkout');
-            const cartTotalContainer = document.getElementById('cart-total-checkout');
-            let total = 0;
-
-            cartItemsContainer.innerHTML = ''; // Limpa os itens do carrinho
-
-            cart.forEach(item => {
-                const itemTotal = item.price * item.quantity;
-                total += itemTotal;
-
-                cartItemsContainer.innerHTML += `
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <div>${item.name}: ${item.quantity}x = ${itemTotal}€</div>
-                    </div>
-                `;
-            });
-
-            cartTotalContainer.innerHTML = `Total: ${total} €`;
-        }
-        function clearLocalStorageAndRedirect() {
-        // Limpa o localStorage
-        localStorage.removeItem('cart');
-        localStorage.removeItem('compraId');
-
-        // Redireciona para a página index.php
-        window.location.href = 'index.php?compra_finalizada=true';
-       }
-
-        // Chama a função para atualizar o resumo do carrinho ao carregar a página
-        updateCartSummary();
-    </script>
 </body>
 </html>

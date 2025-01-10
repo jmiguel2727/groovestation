@@ -8,13 +8,13 @@ function generateRandomId(length = 8) {
     return result;
 }
 
-// Função para abrir a sidebar
+// Função para abrir a sidebar do carrinho
 function openSideBar() {
     document.getElementById("mySidebar").style.display = "block";
     updateCart();
 }
 
-// Função para fechar a sidebar
+// Função para fechar a sidebar do carrinho
 function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
 }
@@ -38,24 +38,11 @@ function addToCart(id, name, price) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Atualiza no banco de dados via Fetch API
-    fetch('includes/updateproduto.inc.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ action: "add", productId: id, compraId })
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Erro ao atualizar o carrinho no banco de dados:', error));
-
     updateCart();
 }
 
-// Função para remover item do carrinho
-function removeFromCart(index, productId) {
+// Função para remover item do carrinho (apenas do localStorage)
+function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (cart[index].quantity > 1) {
@@ -65,19 +52,6 @@ function removeFromCart(index, productId) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Atualiza no banco de dados via Fetch API
-    fetch('includes/updateproduto.inc.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ action: "remove", productId })
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Erro ao atualizar o carrinho no banco de dados:', error));
-
     updateCart();
 }
 
@@ -97,7 +71,7 @@ function updateCart() {
         cartItemsContainer.innerHTML += `
             <div class="d-flex justify-content-between align-items-center mb-2">
                 <div>${item.name}: ${item.quantity}x = ${itemTotal}€</div>
-                <button class="btn btn-sm" onclick="removeFromCart(${index}, ${item.id})">
+                <button class="btn btn-sm" onclick="removeFromCart(${index})">
                     <i class="bi bi-trash3"></i>
                 </button>
             </div>
@@ -107,5 +81,5 @@ function updateCart() {
     cartTotalContainer.innerHTML = `Total: ${total} €`;
 }
 
-// Chama a função para atualizar o carrinho ao carregar a página
+// Atualiza o carrinho ao carregar a página
 document.addEventListener('DOMContentLoaded', updateCart);

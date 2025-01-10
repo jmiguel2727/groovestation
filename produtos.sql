@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `artigos_compra` (
   `produto_id` int DEFAULT NULL,
   `quantidade` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- A despejar dados para tabela grupo205.artigos_compra: ~0 rows (aproximadamente)
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `compras` (
   `Localidade` varchar(50) DEFAULT NULL,
   `NIF` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- A despejar dados para tabela grupo205.compras: ~0 rows (aproximadamente)
 
