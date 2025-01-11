@@ -73,7 +73,7 @@
     </main>
 
     <?php include('includes/footer.php') ?>
-    <script src="includes/jscheckout.js">// script jscarrinho.js</script>
+    <script src="includes/jscheckout.js">// script checkout.js</script>
 
 </body>
 </html>
